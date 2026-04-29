@@ -1,53 +1,101 @@
-/* 整个页面的基础样式 */
 body {
-  margin: 0; /* 去掉默认边距 */
-  padding: 20px; /* 页面内边距 */
-  font-family: "微软雅黑", sans-serif; /* 字体 */
-  background-color: #f5f5f5; /* 背景色 */
+    margin: 0;
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(135deg, #1d2b64, #f8cdda);
+    color: white;
 }
 
-/* 头部样式 */
-header {
-  text-align: center; /* 内容居中 */
-  padding: 20px;
-  background-color: white; /* 白色背景 */
-  border-radius: 10px; /* 圆角 */
-  box-shadow: 0 2px 5px #ddd; /* 轻微阴影 */
+/* 导航栏 */
+.nav {
+    text-align: center;
+    padding: 20px;
 }
 
-/* 导航链接样式 */
-nav a {
-  margin: 0 15px; /* 链接之间的距离 */
-  text-decoration: none; /* 去掉下划线 */
-  color: #333; /* 文字颜色 */
-  font-weight: bold; /* 加粗 */
+.nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
-nav a:hover {
-  color: #007bff; /* 鼠标悬停时变色 */
+.nav a:hover {
+    color: #00c6ff;
 }
 
-/* 主要内容区域样式 */
-main {
-  max-width: 800px; /* 最大宽度 */
-  margin: 30px auto; /* 上下边距30px，左右居中 */
-  background-color: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px #ddd;
+/* 主体 */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
 }
 
-/* 按钮样式 */
-#greetBtn {
-  padding: 10px 20px; /* 内边距 */
-  background-color: #007bff; /* 蓝色背景 */
-  color: white; /* 白色文字 */
-  border: none; /* 去掉边框 */
-  border-radius: 5px; /* 圆角 */
-  cursor: pointer; /* 鼠标变成手型 */
-  font-size: 16px;
+/* 卡片 */
+.card {
+    width: 600px;
+    background: rgba(0,0,0,0.5);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    text-align: center;
+    animation: fadeIn 1s ease;
 }
 
-#greetBtn:hover {
-  background-color: #0056b3; /* 悬停时加深颜色 */
+/* 标题 */
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+/* 副标题 */
+.subtitle {
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+/* 分割线 */
+.divider {
+    height: 1px;
+    background: rgba(255,255,255,0.3);
+    margin: 20px 0;
+}
+
+/* 简介 */
+.intro {
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* 按钮 */
+.btn-group {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background: #00c6ff;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0072ff;
+}
+
+/* 动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
