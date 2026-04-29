@@ -274,3 +274,46 @@ body {
   width: 100%;
 
 }
+.avatar {
+
+    width: 140px;
+
+    height: 140px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 4px solid #eaf4ff;
+
+    box-shadow: 0 10px 30px rgba(0, 100, 255, 0.2);
+
+    transition: all 0.3s ease;
+
+}
+
+/* 悬停放大一点 */
+
+.avatar:hover {
+
+    transform: scale(1.05);
+
+}
+
+/* 轻微浮动动画 */
+
+@keyframes float {
+
+    0% { transform: translateY(0px); }
+
+    50% { transform: translateY(-8px); }
+
+    100% { transform: translateY(0px); }
+
+}
+
+.avatar {
+
+    animation: float 3s ease-in-out infinite;
+
+}
