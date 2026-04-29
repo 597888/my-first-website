@@ -1,0 +1,53 @@
+/* 整个页面的基础样式 */
+body {
+  margin: 0; /* 去掉默认边距 */
+  padding: 20px; /* 页面内边距 */
+  font-family: "微软雅黑", sans-serif; /* 字体 */
+  background-color: #f5f5f5; /* 背景色 */
+}
+
+/* 头部样式 */
+header {
+  text-align: center; /* 内容居中 */
+  padding: 20px;
+  background-color: white; /* 白色背景 */
+  border-radius: 10px; /* 圆角 */
+  box-shadow: 0 2px 5px #ddd; /* 轻微阴影 */
+}
+
+/* 导航链接样式 */
+nav a {
+  margin: 0 15px; /* 链接之间的距离 */
+  text-decoration: none; /* 去掉下划线 */
+  color: #333; /* 文字颜色 */
+  font-weight: bold; /* 加粗 */
+}
+
+nav a:hover {
+  color: #007bff; /* 鼠标悬停时变色 */
+}
+
+/* 主要内容区域样式 */
+main {
+  max-width: 800px; /* 最大宽度 */
+  margin: 30px auto; /* 上下边距30px，左右居中 */
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px #ddd;
+}
+
+/* 按钮样式 */
+#greetBtn {
+  padding: 10px 20px; /* 内边距 */
+  background-color: #007bff; /* 蓝色背景 */
+  color: white; /* 白色文字 */
+  border: none; /* 去掉边框 */
+  border-radius: 5px; /* 圆角 */
+  cursor: pointer; /* 鼠标变成手型 */
+  font-size: 16px;
+}
+
+#greetBtn:hover {
+  background-color: #0056b3; /* 悬停时加深颜色 */
+}
