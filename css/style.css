@@ -3,6 +3,7 @@ body {
     font-family: "Arial", sans-serif;
     background: linear-gradient(135deg, #1d2b64, #f8cdda);
     color: white;
+    text-align：center；
 }
 
 /* 导航栏 */
