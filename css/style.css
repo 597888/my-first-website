@@ -1,12 +1,10 @@
-/* 基础 */
+/* 基础 body 样式 */
 
 body {
 
   margin: 0;
 
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-
-  background: linear-gradient(135deg, #eef5ff, #ffffff);
 
   color: #333;
 
@@ -16,29 +14,23 @@ body {
 
   padding: 0 20px;
 
+  /* 背景渐变+亮度 */
+
+  background: linear-gradient(135deg, #dbeafe, #f0f9ff);
+
+  background-attachment: fixed;
+
   animation: fadeIn 1s ease;
 
 }
 
-/* 页面淡入 */
+/* 页面淡入动画 */
 
 @keyframes fadeIn {
 
-  from {
+  from { opacity: 0; transform: translateY(20px); }
 
-    opacity: 0;
-
-    transform: translateY(20px);
-
-  }
-
-  to {
-
-    opacity: 1;
-
-    transform: translateY(0);
-
-  }
+  to { opacity: 1; transform: translateY(0); }
 
 }
 
@@ -54,15 +46,17 @@ body {
 
   padding: 20px 0;
 
+  background: rgba(255, 255, 255, 0.85);
+
+  border-radius: 12px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+
+  backdrop-filter: blur(5px);
+
 }
 
-.logo {
-
-  font-weight: bold;
-
-  font-size: 20px;
-
-}
+.logo { font-weight: bold; font-size: 20px; }
 
 .menu a {
 
@@ -74,15 +68,11 @@ body {
 
   position: relative;
 
-}
-
-.menu .active {
-
-  color: #3b82f6;
+  font-weight: 500;
 
 }
 
-/* 导航下划线动画 */
+.menu .active { color: #3b82f6; }
 
 .menu a::after {
 
@@ -104,13 +94,9 @@ body {
 
 }
 
-.menu a:hover::after {
+.menu a:hover::after { width: 100%; }
 
-  width: 100%;
-
-}
-
-/* 头部 */
+/* hero 头部 */
 
 .hero {
 
@@ -126,9 +112,15 @@ body {
 
   flex-wrap: wrap;
 
+  background: rgba(255,255,255,0.5);
+
+  border-radius: 16px;
+
+  box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+
 }
 
-/* 头像（统一优化版） */
+/* 头像 */
 
 .avatar {
 
@@ -150,51 +142,27 @@ body {
 
 }
 
-.avatar:hover {
+.avatar:hover { transform: scale(1.08); }
 
-  transform: scale(1.05);
-
-}
-
-/* 浮动动画 */
+/* 头像浮动 */
 
 @keyframes float {
 
   0% { transform: translateY(0px); }
 
-  50% { transform: translateY(-8px); }
+  50% { transform: translateY(-10px); }
 
   100% { transform: translateY(0px); }
 
 }
 
-/* 右侧内容 */
+/* hero 右侧文字 */
 
-.right h1 {
+.right h1 { font-size: 38px; margin-bottom: 10px; }
 
-  font-size: 36px;
+.tag { color: #3b82f6; margin-bottom: 20px; font-weight: 500; }
 
-  margin-bottom: 10px;
-
-}
-
-.tag {
-
-  color: #3b82f6;
-
-  margin-bottom: 20px;
-
-}
-
-.desc {
-
-  color: #666;
-
-  line-height: 1.6;
-
-  margin-bottom: 25px;
-
-}
+.desc { color: #555; line-height: 1.6; margin-bottom: 25px; }
 
 /* 按钮 */
 
@@ -202,7 +170,7 @@ body {
 
   padding: 12px 25px;
 
-  background: #3b82f6;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
 
   color: white;
 
@@ -210,17 +178,19 @@ body {
 
   text-decoration: none;
 
+  font-weight: 500;
+
+  box-shadow: 0 4px 12px rgba(59,130,246,0.3);
+
   transition: 0.3s;
 
 }
 
 .btn:hover {
 
-  background: #2563eb;
+  transform: translateY(-3px);
 
-  transform: translateY(-2px);
-
-  box-shadow: 0 8px 20px rgba(59,130,246,0.4);
+  box-shadow: 0 8px 20px rgba(59,130,246,0.5);
 
 }
 
@@ -252,7 +222,7 @@ body {
 
   border-radius: 16px;
 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
 
   transition: all 0.3s ease;
 
@@ -262,7 +232,7 @@ body {
 
 .card:hover {
 
-  transform: translateY(-8px);
+  transform: translateY(-10px);
 
   box-shadow: 0 20px 40px rgba(0,0,0,0.12);
 
@@ -278,4 +248,10 @@ footer {
 
   color: #888;
 
+  font-size: 14px;
+
 }
+
+/* 文本居中 */
+
+h1, h2, p { text-align: center; }
