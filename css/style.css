@@ -637,3 +637,14 @@ body {
     animation: float 3s ease-in-out infinite;
 
 }
+/* 让页面主体容器居中 */
+.container {
+  width: 80%;        /* 限制容器宽度，避免占满全屏 */
+  margin: 0 auto;    /* 水平居中（上下边距0，左右自动） */
+  text-align: center;/* 容器内的文字、元素水平居中 */
+}
+
+/* 可选：让标题和文本更协调 */
+.card h1, .card p {
+  margin: 10px 0;    /* 增加上下间距 */
+}
