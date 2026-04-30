@@ -335,3 +335,14 @@ body {
   margin: 0 auto;
   width: 80%;
 }
+/* 页面容器居中 */
+body {
+  max-width: 1200px; /* 限制页面宽度 */
+  margin: 0 auto; /* 左右自动外边距实现居中 */
+  padding: 0 20px; /* 防止内容贴边 */
+}
+
+/* 文本内容居中（可选） */
+h1, p {
+  text-align: center;
+}
