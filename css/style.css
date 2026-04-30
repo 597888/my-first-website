@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+/* 基础 */
+
 body {
 
   margin: 0;
@@ -8,6 +9,36 @@ body {
   background: linear-gradient(135deg, #eef5ff, #ffffff);
 
   color: #333;
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 0 20px;
+
+  animation: fadeIn 1s ease;
+
+}
+
+/* 页面淡入 */
+
+@keyframes fadeIn {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
 
 }
 
@@ -19,7 +50,9 @@ body {
 
   justify-content: space-between;
 
-  padding: 20px 60px;
+  align-items: center;
+
+  padding: 20px 0;
 
 }
 
@@ -39,11 +72,41 @@ body {
 
   color: #555;
 
+  position: relative;
+
 }
 
 .menu .active {
 
   color: #3b82f6;
+
+}
+
+/* 导航下划线动画 */
+
+.menu a::after {
+
+  content: '';
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -5px;
+
+  width: 0;
+
+  height: 2px;
+
+  background: #3b82f6;
+
+  transition: 0.3s;
+
+}
+
+.menu a:hover::after {
+
+  width: 100%;
 
 }
 
@@ -57,29 +120,55 @@ body {
 
   justify-content: center;
 
-  padding: 60px;
+  padding: 60px 0;
 
   gap: 60px;
 
+  flex-wrap: wrap;
+
 }
 
-/* ⭐头像（重点优化） */
+/* 头像（统一优化版） */
 
 .avatar {
 
-  width: 220px;
+  width: 160px;
 
-  height: 280px;
+  height: 160px;
+
+  border-radius: 50%;
 
   object-fit: cover;
 
-  border-radius: 20px; /* 不再是圆 */
+  border: 4px solid #eaf4ff;
 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 30px rgba(0, 100, 255, 0.2);
+
+  transition: all 0.3s ease;
+
+  animation: float 3s ease-in-out infinite;
 
 }
 
-/* 右侧 */
+.avatar:hover {
+
+  transform: scale(1.05);
+
+}
+
+/* 浮动动画 */
+
+@keyframes float {
+
+  0% { transform: translateY(0px); }
+
+  50% { transform: translateY(-8px); }
+
+  100% { transform: translateY(0px); }
+
+}
+
+/* 右侧内容 */
 
 .right h1 {
 
@@ -129,6 +218,10 @@ body {
 
   background: #2563eb;
 
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(59,130,246,0.4);
+
 }
 
 /* 信息区 */
@@ -141,9 +234,13 @@ body {
 
   gap: 30px;
 
-  padding: 40px;
+  padding: 40px 0;
+
+  flex-wrap: wrap;
 
 }
+
+/* 卡片 */
 
 .card {
 
@@ -151,54 +248,15 @@ body {
 
   padding: 30px;
 
-  width: 300px;
+  width: 280px;
 
   border-radius: 16px;
 
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 
-}
-
-footer {
+  transition: all 0.3s ease;
 
   text-align: center;
-
-  padding: 30px;
-
-  color: #888;
-/* 页面淡入 */
-
-body {
-
-  animation: fadeIn 1s ease;
-
-}
-
-@keyframes fadeIn {
-
-  from {
-
-    opacity: 0;
-
-    transform: translateY(20px);
-
-  }
-
-  to {
-
-    opacity: 1;
-
-    transform: translateY(0);
-
-  }
-
-}
-
-/* 卡片悬浮 */
-
-.card {
-
-  transition: all 0.3s ease;
 
 }
 
@@ -210,139 +268,14 @@ body {
 
 }
 
-/* 按钮动画 */
+/* 页脚 */
 
-.btn {
+footer {
 
-  position: relative;
-
-  overflow: hidden;
-
-}
-
-.btn:hover {
-
-  transform: translateY(-2px);
-
-  box-shadow: 0 8px 20px rgba(59,130,246,0.4);
-
-}
-
-/* 头像微动 */
-
-.avatar {
-
-  transition: 0.4s ease;
-
-}
-
-.avatar:hover {
-
-  transform: scale(1.05) rotate(1deg);
-
-}
-
-/* 导航 hover */
-
-.menu a {
-
-  position: relative;
-
-}
-
-.menu a::after {
-
-  content: '';
-
-  position: absolute;
-
-  left: 0;
-
-  bottom: -5px;
-
-  width: 0;
-
-  height: 2px;
-
-  background: #3b82f6;
-
-  transition: 0.3s;
-
-}
-
-.menu a:hover::after {
-
-  width: 100%;
-
-}
-.avatar {
-
-    width: 140px;
-
-    height: 140px;
-
-    border-radius: 50%;
-
-    object-fit: cover;
-
-    border: 4px solid #eaf4ff;
-
-    box-shadow: 0 10px 30px rgba(0, 100, 255, 0.2);
-
-    transition: all 0.3s ease;
-
-}
-
-/* 悬停放大一点 */
-
-.avatar:hover {
-
-    transform: scale(1.05);
-
-}
-
-/* 轻微浮动动画 */
-
-@keyframes float {
-
-    0% { transform: translateY(0px); }
-
-    50% { transform: translateY(-8px); }
-
-    100% { transform: translateY(0px); }
-
-}
-
-.avatar {
-
-    animation: float 3s ease-in-out infinite;
-/* 页面整体居中样式 */
-body {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.nav {
-  display: flex;
-  justify-content: center; /* 导航项居中排列 */
-  gap: 40px; /* 导航项间距 */
-  padding: 20px 0;
-}
-
-.container, .card {
   text-align: center;
-  margin: 0 auto;
-  width: 80%;
-}
-/* 页面容器居中 */
-body {
-  max-width: 1200px; /* 限制页面宽度 */
-  margin: 0 auto; /* 左右自动外边距实现居中 */
-  padding: 0 20px; /* 防止内容贴边 */
-}
 
-/* 文本内容居中（可选） */
-h1, p {
-  text-align: center;
+  padding: 30px;
+
+  color: #888;
+
 }
