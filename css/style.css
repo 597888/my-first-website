@@ -1,3 +1,323 @@
+<<<<<<< HEAD
+body {
+
+  margin: 0;
+
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+
+  background: linear-gradient(135deg, #eef5ff, #ffffff);
+
+  color: #333;
+
+}
+
+/* 导航 */
+
+.nav {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 20px 60px;
+
+}
+
+.logo {
+
+  font-weight: bold;
+
+  font-size: 20px;
+
+}
+
+.menu a {
+
+  margin-left: 20px;
+
+  text-decoration: none;
+
+  color: #555;
+
+}
+
+.menu .active {
+
+  color: #3b82f6;
+
+}
+
+/* 头部 */
+
+.hero {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 60px;
+
+  gap: 60px;
+
+}
+
+/* ⭐头像（重点优化） */
+
+.avatar {
+
+  width: 220px;
+
+  height: 280px;
+
+  object-fit: cover;
+
+  border-radius: 20px; /* 不再是圆 */
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+}
+
+/* 右侧 */
+
+.right h1 {
+
+  font-size: 36px;
+
+  margin-bottom: 10px;
+
+}
+
+.tag {
+
+  color: #3b82f6;
+
+  margin-bottom: 20px;
+
+}
+
+.desc {
+
+  color: #666;
+
+  line-height: 1.6;
+
+  margin-bottom: 25px;
+
+}
+
+/* 按钮 */
+
+.btn {
+
+  padding: 12px 25px;
+
+  background: #3b82f6;
+
+  color: white;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+
+}
+
+.btn:hover {
+
+  background: #2563eb;
+
+}
+
+/* 信息区 */
+
+.info {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 30px;
+
+  padding: 40px;
+
+}
+
+.card {
+
+  background: white;
+
+  padding: 30px;
+
+  width: 300px;
+
+  border-radius: 16px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+footer {
+
+  text-align: center;
+
+  padding: 30px;
+
+  color: #888;
+/* 页面淡入 */
+
+body {
+
+  animation: fadeIn 1s ease;
+
+}
+
+@keyframes fadeIn {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+/* 卡片悬浮 */
+
+.card {
+
+  transition: all 0.3s ease;
+
+}
+
+.card:hover {
+
+  transform: translateY(-8px);
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+
+}
+
+/* 按钮动画 */
+
+.btn {
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+.btn:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(59,130,246,0.4);
+
+}
+
+/* 头像微动 */
+
+.avatar {
+
+  transition: 0.4s ease;
+
+}
+
+.avatar:hover {
+
+  transform: scale(1.05) rotate(1deg);
+
+}
+
+/* 导航 hover */
+
+.menu a {
+
+  position: relative;
+
+}
+
+.menu a::after {
+
+  content: '';
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -5px;
+
+  width: 0;
+
+  height: 2px;
+
+  background: #3b82f6;
+
+  transition: 0.3s;
+
+}
+
+.menu a:hover::after {
+
+  width: 100%;
+
+}
+.avatar {
+
+    width: 140px;
+
+    height: 140px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 4px solid #eaf4ff;
+
+    box-shadow: 0 10px 30px rgba(0, 100, 255, 0.2);
+
+    transition: all 0.3s ease;
+
+}
+
+/* 悬停放大一点 */
+
+.avatar:hover {
+
+    transform: scale(1.05);
+
+}
+
+/* 轻微浮动动画 */
+
+@keyframes float {
+
+    0% { transform: translateY(0px); }
+
+    50% { transform: translateY(-8px); }
+
+    100% { transform: translateY(0px); }
+
+}
+
+.avatar {
+
+    animation: float 3s ease-in-out infinite;
+
+=======
 body {
 
   margin: 0;
